@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
                         editPassword.getText().toString()
                 );
 
-                Log.d("Cek Error", isExist);
+                Log.d("nama_tag", String.valueOf(isExist)   );
 
                 if (isExist) {
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
