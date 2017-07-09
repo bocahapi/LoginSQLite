@@ -28,21 +28,22 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean isExist = databaseHelper.checkUserExist(
-                        editUsername.getText().toString(),
-                        editPassword.getText().toString()
-                );
-
-                Log.d("nama_tag", String.valueOf(isExist)   );
-
-                if (isExist) {
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    intent.putExtra("username", editUsername.getText().toString());
-                    startActivity(intent);
-                } else {
-                    editPassword.setText(null);
-                    Toast.makeText(LoginActivity.this, "Login Failed! Username & Password Not Match", Toast.LENGTH_LONG).show();
-                }
+                Toast.makeText(LoginActivity.this, "OKE", Toast.LENGTH_SHORT).show();
+//                boolean isExist = databaseHelper.checkUserExist(
+//                        editUsername.getText().toString(),
+//                        editPassword.getText().toString()
+//                );
+//
+//                Log.d("nama_tag", String.valueOf(isExist)   );
+//
+//                if (isExist) {
+//                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//                    intent.putExtra("username", editUsername.getText().toString());
+//                    startActivity(intent);
+//                } else {
+//                    editPassword.setText(null);
+//                    Toast.makeText(LoginActivity.this, "Login Failed! Username & Password Not Match", Toast.LENGTH_LONG).show();
+//                }
             }
         });
     }
